@@ -18,3 +18,19 @@
 144.0
 152.0
 
+#include <iostream>
+#include<iomanip>
+using namespace  std;
+  
+### 解答
+```
+int main()
+{
+	int a;
+	double c;
+	cin >> a;
+	c = a * 1.6;
+	cout << fixed << setprecision(1) << c << endl;
+
+} 
+```
