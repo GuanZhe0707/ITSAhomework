@@ -1,18 +1,21 @@
-﻿#include <iostream>  
+﻿#include<iostream>
 using namespace std;
-
 int main() {
-    int x, y;
-    while (cin >> x >> y)
+    int n = 0;
+    int bin[8];
+    cin >> n;
+    if (n < 0)
     {
-        if (x * x + y * y <= 10000)
-        {
-            cout << "inside" << endl;
-        }
-        else
-        {
-            cout << "outside" << endl;
-        }
+        n += 256; //負數則推移至正整數
     }
-    return 0;
+    for (int i = 7; i >= 0; i--)
+    {
+        bin[i] = n % 2;
+        n /= 2;
+    }
+    for (int i = 0; i < 8; i++)
+    {
+        cout << bin[i];
+    }
+    cout << "\n";
 }
