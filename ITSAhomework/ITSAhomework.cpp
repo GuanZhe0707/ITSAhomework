@@ -10,4 +10,4 @@ int main()
 	c = a * 1.6;
 	cout << fixed << setprecision(1) << c << endl;
 
-}
+} 
