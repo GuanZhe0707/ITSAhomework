@@ -18,6 +18,7 @@ int main()
 		getline(cin, Str);
 		istringstream cutStr(Str);
 		while (getline(cutStr, s, ' '))
+		{
 			pokeS.push_back(s);
 		}
 		sortPoke(pokeS, pokeS.size());
@@ -40,6 +41,7 @@ void sortPoke(vector<string>& a, int n)
 			if (a[i][0] > a[j][0]) { t = a[i]; a[i] = a[j]; a[j] = t; }
 		}
 	}
+
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0 + i; j < n; j++)
